@@ -1,0 +1,49 @@
+const currentDisplay = document.querySelector('.display-current')
+const buttons = document.querySelectorAll('button')
+const operation = ['*', '/', '+', '-']
+let update = ''
+let isTestOPeration = false
+
+const capturingDigit = (button) => {
+    let character = button.target.textContent
+
+    if (character === '=') {
+        equal(update)
+        return
+    }
+
+    if (character === 'C') {
+        clear()
+        return
+    }
+
+
+
+    update += character
+    updateScrean(update)
+
+}
+
+const clear = () => {
+    update = ''
+    updateScrean('0')
+    isTestOPeration = false
+}
+const equal = (string) => {
+    if(operation.includes(string)){
+        string=string.slice(0,-1)
+    }
+    let result = eval(string)
+
+    updateScrean(result)
+    update = result
+}
+const updateScrean = (string) => {
+    currentDisplay.textContent = string
+}
+
+
+
+buttons.forEach(button => {
+    button.addEventListener('click', event => capturingDigit(event))
+});

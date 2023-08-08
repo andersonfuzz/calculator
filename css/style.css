@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: Helvetica;
+    color: #fff
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../img/png/012-code.png'); */
+}
+
+.container {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 500px;
+    background-color: #000;
+    box-shadow: 1px 1px 30px #000;
+}
+
+
+
+.display-previous {
+    height: 10%;
+    font-size: 1rem;
+    color: antiquewhite;
+    text-align: end;
+    padding: 15px;
+    overflow-wrap: break-word;
+    background-color: #0e0d0d;
+    border-radius: 25px 25px 0 0;
+}
+
+.display-current {
+    height: 25%;
+    font-size: 3rem;
+    overflow-wrap: break-word;
+    text-align: end;
+    padding: 15px;
+
+}
+
+
+.container-Keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    height: 67%;
+    padding: 10px;
+}
+
+.container-Keys .key {
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.container-Keys .key:hover {
+    box-shadow: 1px 1px 5px #8f8b8b;
+    cursor: pointer;
+}
+
+.orange {
+    background-color: #FF9403;
+}
+
+.grey {
+    background-color: #A8A8A8;
+}
+
+.dark-grey {
+    background-color: #343434;
+}
+
+
+.container-Keys .singular {
+    border-radius: 50%;
+    font-size: 1.5rem;
+
+
+}
+
+.container-Keys .singular:hover {
+    box-shadow: 1px 1px 5px #8f8b8b;
+    cursor: pointer;
+
+}
